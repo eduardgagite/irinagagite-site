@@ -8,12 +8,13 @@ const normalizeBasePath = (value) => {
 const basePath = normalizeBasePath(
   process.env.NEXT_PUBLIC_BASE_PATH || repoName || ""
 )
+const assetPrefix = basePath ? `${basePath}/` : undefined
 
 const nextConfig = {
   output: "export",
   trailingSlash: true,
   basePath,
-  assetPrefix: basePath || undefined,
+  assetPrefix,
   typescript: {
     ignoreBuildErrors: true,
   },
