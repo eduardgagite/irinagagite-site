@@ -147,7 +147,7 @@ const content = {
     },
     footer: {
       rights: "All rights reserved.",
-      createdBy: "Website by Alania GO.",
+      createdBy: "made by the team",
     },
     bookNow: "Contact",
   },
@@ -264,7 +264,7 @@ const content = {
     },
     footer: {
       rights: "Все права защищены.",
-      createdBy: "Сайт создан командой Alania GO.",
+      createdBy: "сделано командой",
     },
     bookNow: "Связаться",
   },
@@ -809,7 +809,7 @@ export default function Home() {
                         >
                           <div className="relative w-full h-full">
                             <Image
-                              src={image.src || "/placeholder.svg"}
+                              src={image.src}
                               alt={image.alt}
                               fill
                               className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -875,7 +875,7 @@ export default function Home() {
 
             <div className="relative w-full h-full max-w-4xl max-h-[80vh] mx-auto flex items-center justify-center">
               <Image
-                src={galleryImages[currentImageIndex].src || "/placeholder.svg"}
+                src={galleryImages[currentImageIndex].src}
                 alt={galleryImages[currentImageIndex].alt}
                 fill
                 className="object-contain"
@@ -1028,12 +1028,28 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 bg-slate-950 text-slate-400 text-center text-sm">
-          <div className="container px-4 md:px-6">
-            <p>
-              © {new Date().getFullYear()} {t.name}. {t.footer.rights}
-            </p>
-            <p className="mt-2">{t.footer.createdBy}</p>
+        <footer className="bg-slate-950 text-slate-400">
+          <div className="border-t border-white/10">
+            <div className="container px-4 md:px-6 py-6">
+              <div className="flex items-center justify-between gap-6 text-sm">
+                <p>© 2026 Irina Gagite. All rights reserved.</p>
+                <a
+                  href="https://alania-go.ru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
+                >
+                  <span className="text-xs uppercase tracking-[0.2em]">{t.footer.createdBy}</span>
+                  <Image
+                    src="/logo-alaniago.png"
+                    alt="Alania GO"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 object-contain"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </footer>
 
