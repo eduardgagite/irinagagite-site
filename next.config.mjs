@@ -17,9 +17,6 @@ const nextConfig = {
   trailingSlash: true,
   basePath,
   assetPrefix,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true,
   },

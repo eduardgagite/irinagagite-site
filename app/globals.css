@@ -61,3 +61,15 @@
   }
 }
 
+@layer base {
+  .lang-en,
+  .lang-ru {
+    display: none;
+  }
+  html[lang="en"] .lang-en {
+    display: inline;
+  }
+  html[lang="ru"] .lang-ru {
+    display: inline;
+  }
+}
