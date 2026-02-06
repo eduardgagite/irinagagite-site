@@ -110,7 +110,7 @@ export default function Gallery({ images, labels }: GalleryProps) {
               <div key={image.src} className="embla__slide flex-[0_0_33.33%] min-w-0 px-2 md:px-4 relative">
                 <button
                   type="button"
-                  className="aspect-square overflow-hidden rounded-lg cursor-pointer group text-left"
+                  className="aspect-square w-full overflow-hidden rounded-lg cursor-pointer group text-left"
                   onClick={() => openLightbox(index)}
                 >
                   <div className="relative w-full h-full">
